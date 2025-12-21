@@ -1,4 +1,4 @@
-// No type imports
+// No type 
 
 export const groupedMenus = [
   {

@@ -16,7 +16,7 @@ const generateFakeNews = (count = 12) => {
   }));
 };
 
-// Fake paging meta
+// Fake paging 
 const generateFakePaging = (page, perPage, total = 50) => {
   const totalPages = Math.ceil(total / perPage);
   return {

@@ -1,0 +1,42 @@
+import Link from "next/link";
+import React from "react";
+
+const Pagination = ({ currentPage, hasNextPage, basePath }) => {
+  const prevPage = currentPage > 0 ? currentPage - 1 : 0;
+  const nextPage = currentPage + 1;
+
+  // Don't render if there's only one page and no next page
+  if (currentPage === 0 && !hasNextPage) {
+    return null;
+  }
+
+  return (
+    <div className="flex items-center justify-between gap-4 mt-12">
+      <Link
+        href={`${basePath}?page=${prevPage}`}
+        className={`px-6 py-2 bg-white border border-gray-300 text-gray-700 rounded-[4px] font-medium hover:bg-gray-50 transition ${
+          currentPage === 0 ? "opacity-50 cursor-not-allowed pointer-events-none" : ""
+        }`}
+        aria-disabled={currentPage === 0}
+        tabIndex={currentPage === 0 ? -1 : undefined}
+      >
+        ← Previous
+      </Link>
+
+      <span className="text-gray-600 font-medium">Page {currentPage || 1}</span>
+
+      <Link
+        href={`${basePath}?page=${nextPage}`}
+        className={`px-6 py-2 bg-primary text-white rounded-[4px] font-medium hover:bg-opacity-90 transition ${
+          !hasNextPage ? "opacity-50 cursor-not-allowed pointer-events-none" : ""
+        }`}
+        aria-disabled={!hasNextPage}
+        tabIndex={!hasNextPage ? -1 : undefined}
+      >
+        Next →  
+      </Link>
+    </div>
+  );
+};
+
+export default Pagination;

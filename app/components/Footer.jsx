@@ -12,7 +12,7 @@ import {
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  // Get submenus safely
+  // Get submenus safel
   const insightsMenu =
     groupedMenus.find((m) => m.name === "Insights")?.subMenus || [];
 

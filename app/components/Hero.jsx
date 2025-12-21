@@ -7,7 +7,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(TextPlugin);
 
-// --- StockCandle Component ---
+// --- StockCandle Component 
 const StockCandle = ({ className, isPositive = true }) => {
   const color = isPositive ? "text-green-500" : "text-red-500";
 

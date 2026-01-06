@@ -38,5 +38,5 @@ export const groupedMenus = [
 
 export const accountMenu = {
   name: "Account",
-  path: "/account",
+  path: "/dashboard",
 };

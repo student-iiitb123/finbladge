@@ -4,6 +4,7 @@ import AnimatedArticleCard from "./components/AnimatedArticleCard";
 import LoadingLink from "./components/Loading";
 import { ArrowRight } from "lucide-react";
 import HomepageContentSkeleton from "./components/HomepageContentSkeleton";
+import Navbar from "./components/Navbar";
 
 /* ---------------- STATIC DATA ---------------- */
 
@@ -105,6 +106,8 @@ const staticFeatured = [
 
 function HomepageContent() {
   return (
+     <>
+     <Navbar />
     <div className="bg-white py-16">
       <div className="container mx-auto px-4">
 
@@ -156,6 +159,7 @@ function HomepageContent() {
 
       </div>
     </div>
+    </>
   );
 }
 

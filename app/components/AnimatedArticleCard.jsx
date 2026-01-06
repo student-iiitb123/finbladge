@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import LoadingLink from "./Loading";
+import LoadingLink from "../components/Loading";
 import Image from "next/image";
 import { Calendar, Clock } from "lucide-react";
 
